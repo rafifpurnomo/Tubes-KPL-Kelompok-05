@@ -1,0 +1,6 @@
+@API_TUBES_KPL_KELOMPOK_05_HostAddress = http://localhost:5298
+
+GET {{API_TUBES_KPL_KELOMPOK_05_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
