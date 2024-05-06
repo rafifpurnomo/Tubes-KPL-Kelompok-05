@@ -1,0 +1,26 @@
+﻿[
+  {
+    "kodeBuku": "BK001",
+    "Judul": "Harry Potter and the Philosopher's Stone",
+    "Sinopsis": "Harry Potter, seorang anak yatim piatu yang menemukan bahwa ia adalah seorang penyihir dan diterima di Sekolah Sihir Hogwarts.",
+    "Penulis": "J.K. Rowling",
+    "TahunTerbit": 1997,
+    "StatusPeminjaman": false
+  },
+  {
+    "kodeBuku": "BK002",
+    "Judul": "To Kill a Mockingbird",
+    "Sinopsis": "Kisah tentang keadilan dan prasangka di sebuah kota kecil di Alabama, diceritakan melalui mata seorang anak perempuan bernama Scout Finch.",
+    "Penulis": "Harper Lee",
+    "TahunTerbit": 1960,
+    "StatusPeminjaman": false
+  },
+  {
+    "kodeBuku": "BK003",
+    "Judul": "The Great Gatsby",
+    "Sinopsis": "Cerita tentang kekayaan, cinta, dan ambisi di era Jazz Age di Amerika Serikat.",
+    "Penulis": "F. Scott Fitzgerald",
+    "TahunTerbit": 1925,
+    "StatusPeminjaman": false
+  }
+]
