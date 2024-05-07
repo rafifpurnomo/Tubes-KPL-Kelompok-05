@@ -44,6 +44,12 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
         }
 
+        public void SyaratPinjamBuku()
+        {
+
+
+
+        }
 
 
     }
