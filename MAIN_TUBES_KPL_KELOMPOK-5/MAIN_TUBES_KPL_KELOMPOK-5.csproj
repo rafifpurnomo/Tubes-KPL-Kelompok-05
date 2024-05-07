@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LIBRARY_TUBES_KPL_KELOMPOK-05\LIBRARY_TUBES_KPL_KELOMPOK-05.csproj" />
+  </ItemGroup>
+
 </Project>
