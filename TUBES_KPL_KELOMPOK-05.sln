@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_TUBES_KPL_KELOMPOK-05", "API_TUBES_KPL_KELOMPOK-05\API_TUBES_KPL_KELOMPOK-05.csproj", "{9BC6DC3B-E816-4D6B-8282-8AB48652EBFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0C35918-326C-4CD0-AFAD-940B629D44EA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDriven_TUBES_KPL_KELOMPOK_05", "TableDriven_TUBES_KPL_KELOMPOK_05\TableDriven_TUBES_KPL_KELOMPOK_05.csproj", "{FC3F26AC-CC50-4691-AE9C-33ED31459823}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BC6DC3B-E816-4D6B-8282-8AB48652EBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC6DC3B-E816-4D6B-8282-8AB48652EBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC6DC3B-E816-4D6B-8282-8AB48652EBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC6DC3B-E816-4D6B-8282-8AB48652EBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3F26AC-CC50-4691-AE9C-33ED31459823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3F26AC-CC50-4691-AE9C-33ED31459823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3F26AC-CC50-4691-AE9C-33ED31459823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3F26AC-CC50-4691-AE9C-33ED31459823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {264D00A4-A9E6-48AE-B5AD-93EC163A1967}
+	EndGlobalSection
+EndGlobal
+=======
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -40,3 +78,4 @@ Global
 		SolutionGuid = {264D00A4-A9E6-48AE-B5AD-93EC163A1967}
 	EndGlobalSection
 EndGlobal
+>>>>>>> main
