@@ -8,6 +8,8 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
     internal class Peminjaman
     {
+        public static int ID_count = 1;
+
         public string ID_Peminjaman { get; set; }
         public Akun Peminjam { get; set; }
         public string JudulBuku { get; set; }
