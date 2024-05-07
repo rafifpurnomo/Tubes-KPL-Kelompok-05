@@ -24,6 +24,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             this.Penulis = penulis;
             this.TahunTerbit = tahunTerbit;
             this.jumlahBuku = jumlahBuku;
+            stok = jumlahBuku;
         }
 
         public void displayBook()
