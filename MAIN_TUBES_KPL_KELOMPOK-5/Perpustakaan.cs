@@ -1,50 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
-    internal class Perpustakaan
+    public class Perpustakaan
     {
-        private List<Buku> buku;
-        private List<Peminjaman> DaftarPeminjaman;
-        public Perpustakaan()
+        private List<Buku> buku = new List<Buku>
         {
-            buku = new List<Buku>();
-            DaftarPeminjaman = new List<Peminjaman>();
+            new Buku("BK001", "Dasar Pemrograman JS", "Javascript", "Rafif" ,2024, 10),
+            new Buku("BK002", "Dasar Pemrograman GO", "Golang", "Belva" ,2010, 10),
+            new Buku("BK003", "Dasar Pemrograman C#", "C#", "Zidan" ,2022, 10),
+            new Buku("BK004", "Dasar Pemrograman WEB", "WEB", "Rizki" ,2009, 10),
+            new Buku("BK005", "Dasar Pemrograman C++", "C++", "Daffa" ,2021, 10),
+            new Buku("BK006", "Dasar Pemrograman Python", "Python", "Ghiyats" ,2018, 10),
+            new Buku("BK007", "Dasar Networking", "Networking", "Dana" ,2018, 10),
+        };
 
+        private Buku[] bukuArray;
+
+        public void toArray()
+        {
+            bukuArray = buku.ToArray(); 
         }
 
-        // Implementasikan Method 
-        public void PeminjamanBuku(List<Buku> rakBuku, Akun pengguna)
+        public void cariByJudul(string judul)
         {
-            Console.Write("Masukkan judul buku yang ingin dipinjam : ");
-            string judulYangDipinjam = Console.ReadLine();
 
-
-            int idx_buku = -1;
-
-            for (int i = 0; i < rakBuku.Count; i++)
+            for (int i = 0; i < bukuArray.Length; i++)
             {
-                if (rakBuku[i].Judul == judulYangDipinjam)
+                if (judul == bukuArray[i].Judul)
                 {
-                    idx_buku = i;
-                    break;
-
-
+                    Console.WriteLine("Kode buku: " + bukuArray[i].kodeBuku);
+                    Console.WriteLine("Judul Buku" + bukuArray[i].Judul);
+                    Console.WriteLine("Sinopsis: " + bukuArray[i].Sinopsis);
+                    Console.WriteLine("Penulis: " + bukuArray[i].Penulis);
+                    Console.WriteLine("Tahun Terbit: " + bukuArray[i].TahunTerbit);
                 }
             }
-            if (idx_buku == -1)
-            {
-                Console.WriteLine("Buku tidak ada");
-            }
-
-
         }
 
+        public int returnIndex(string judul)
+        {
+            int index = -1;
 
+            for (int i = 0; i < bukuArray.Length; i++)
+            {
+                if (judul == bukuArray[i].Judul)
+                {
+                    return index = i;
+                    break;
+                }
+            }
+
+            return index;
+        }
+        
 
     }
 }
