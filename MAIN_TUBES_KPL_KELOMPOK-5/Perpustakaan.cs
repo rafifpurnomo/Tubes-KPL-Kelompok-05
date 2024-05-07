@@ -46,7 +46,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
             else if (rakBuku[idx_buku].stok == 0) // cek ketersediaan buku
             {
-                Console.WriteLine("Stok BUku Kosong");
+                Console.WriteLine("Stok Buku Kosong");
             }
 
             else
