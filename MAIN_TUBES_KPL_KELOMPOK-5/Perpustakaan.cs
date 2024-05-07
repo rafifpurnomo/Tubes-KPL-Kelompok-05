@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LIBRARY_TUBES_KPL_KELOMPOK_05;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
@@ -10,6 +11,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
     {
         private List<Buku> buku;
         private List<Peminjaman> DaftarPeminjaman;
+        ConfigManager configManager = new ConfigManager();
         public Perpustakaan()
         {
             buku = new List<Buku>();
@@ -36,21 +38,32 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
                 }
             }
+
             if (idx_buku == -1)
             {
                 Console.WriteLine("Buku tidak ada");
             }
 
+            else if (rakBuku[idx_buku].stok == 0) // cek ketersediaan buku
+            {
+                Console.WriteLine("Stok BUku Kosong");
+            }
 
+            else
+            {
+                DateTime sekarang = DateTime.Now;
+                string peminjaman = StringLibrary.KonversiDateKeString(sekarang);
+                string pengembalian = StringLibrary.KonversiDateKeString(sekarang.AddDays(configManager.BatasWaktuPeminjaman));
+
+                Peminjaman peminjamanBaru = new Peminjaman(Peminjaman.ID_count.ToString(), rakBuku[idx_buku].Judul, pengguna, peminjaman, pengembalian, false);
+                DaftarPeminjaman.Add(peminjamanBaru);
+                Console.WriteLine("Berhasil melakukan peminjaman");
+                rakBuku[idx_buku].stok--;
+            }
         }
-
-        public void SyaratPinjamBuku()
+        public void tesst()
         {
-
-
-
+            Console.WriteLine("sdsds");
         }
-
-
     }
 }
