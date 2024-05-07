@@ -109,5 +109,24 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 
             return index;
         }
+
+        public void PerpanjangPeminjaman(List<Peminjaman> daftarPeminjam)
+        {
+            Console.Write("Masukan id peminjaman buku: ");
+            string ID_peminjaman = Console.ReadLine();
+
+            foreach (Peminjaman peminjaman in daftarPeminjam)
+            {
+                if (peminjaman.ID_Peminjaman == ID_peminjaman)
+                {
+                    DateTime pengembalianBaru = StringLibrary.KonversiStringKeDate(peminjaman.TanggalPengembalian).AddDays(configManager.BatasWaktuMaksimumPerpanjangan);
+                    peminjaman.TanggalPengembalian = StringLibrary.KonversiDateKeString(pengembalianBaru);
+                    Console.WriteLine("Waktu peminjaman buku Anda sudah dipepanjang selama " + configManager.JumlahMaksimumPerpanjangan + "hari");
+                    break;
+                }
+            }
+
+            Console.WriteLine("Peminjaman dengan ID " + ID_peminjaman + "tidak ditemukan");
+        }
     }
 }
