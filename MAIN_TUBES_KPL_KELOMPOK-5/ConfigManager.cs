@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
-    internal class ConfigManager
+    public class ConfigManager
     {
         public const string filePath = @"covidconfig.json";
 
