@@ -129,6 +129,39 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             Console.WriteLine("Peminjaman dengan ID " + ID_peminjaman + "tidak ditemukan");
         }
 
+        public void PengembalianBuku(List<Peminjaman> daftarPeminjam)
+        {
+            Console.Write("Masukan id peminjaman buku: ");
+            string ID_peminjaman = Console.ReadLine();
 
+            foreach (Peminjaman peminjaman in daftarPeminjam)
+            {
+                if ((peminjaman.ID_Peminjaman == ID_peminjaman) && (!peminjaman.statusPengembalian))
+                {
+                    DateTime jadwalPengembalian = StringLibrary.KonversiStringKeDate(peminjaman.TanggalPengembalian);
+                    if (DateTime.Now <= jadwalPengembalian)
+                    {
+                        peminjaman.statusPengembalian = true;
+                        Console.WriteLine("Terimakasih sudah mengembalikan buku tepat waktu");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Anda perlu membayar denda karena keterlambatan pengembalian");
+                        FineManager bayarDenda = new FineManager(peminjaman.TanggalPengembalian, StringLibrary.KonversiDateKeString(DateTime.Now));
+                        bayarDenda.PembayaranDenda();
+                        Console.WriteLine("Terimakasih sudah mengembalikan buku");
+                        peminjaman.statusPengembalian = true;
+                    }
+                }
+                else if (!peminjaman.statusPengembalian)
+                {
+                    Console.WriteLine("Buku pada ID peminjaman tersebut sudah dikembalikan ");
+                }
+                else
+                {
+                    Console.WriteLine("ID peminjaman tidak ditemukan");
+                }
+            }
+        }
     }
 }
