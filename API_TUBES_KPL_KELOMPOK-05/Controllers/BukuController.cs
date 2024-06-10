@@ -22,14 +22,14 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             return DataDisplayBook;
         }
 
-        // GET DATA ALL API
+        // GET DATA ALL API BY RAFIF
         [HttpGet]
         public IEnumerable<Buku> GET()
         {
             return DataDisplayBook;
         }
 
-        // GET BOOKS BY JUDUL
+        // GET BOOKS BY JUDUL BY RAFIF
         [HttpGet("Judul/{Judul}")]
         public ActionResult<List<Buku>> GETJUDUL(string Judul)
         {
@@ -60,7 +60,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // GET BOOKS BY PENULIS
+        // GET BOOKS BY PENULIS BY BELVA
         [HttpGet("penulis/{Penulis}")]
         public ActionResult<List<Buku>> GETPENULIS(string Penulis)
         {
@@ -91,7 +91,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // GET BOOKS BY TAHUN TERBIT
+        // GET BOOKS BY TAHUN TERBIT BY BELVA
         [HttpGet("tahunTerbit/{TahunTerbit}")]
         public ActionResult<List<Buku>> GETTAHUNTERBIT(int TahunTerbit)
         {
@@ -122,7 +122,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // POST DATA BOOK 
+        // POST DATA BOOK BY BELVA
         [HttpPost]
         public void POST([FromBody] Buku newBook)
         {
@@ -147,7 +147,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // DELETE BUKU BY JUDUL
+        // DELETE BUKU BY JUDUL BY BELVA
         [HttpDelete("judul/{Judul}")]
 
         public void DELETEBYJUDUL(String Judul)
@@ -167,7 +167,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // DELETE BUKU BY KODEBUKU
+        // DELETE BUKU BY KODEBUKU BY BELVA
         [HttpDelete("kode/{kodeBuku}")]
 
         public void DELETEBYKODEBUKU(String kodeBuku)
@@ -187,7 +187,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // DELETE BUKU BY PENULIS
+        // DELETE BUKU BY PENULIS BY BELVA
         [HttpDelete("penulis/{Penulis}")]
 
         public void DELETEBYPENULIS(String Penulis)
@@ -207,7 +207,7 @@ namespace API_TUBES_KPL_KELOMPOK_05.Controllers
             }
         }
 
-        // DELETE BUKU BY PENULIS
+        // DELETE BUKU BY PENULIS BY BELVA
         [HttpDelete("tahun/{TahunTerbit}")]
 
         public void DELETEBYTAHUN(int TahunTerbit)
