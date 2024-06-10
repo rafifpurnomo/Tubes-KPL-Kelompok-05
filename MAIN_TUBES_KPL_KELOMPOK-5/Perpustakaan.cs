@@ -10,6 +10,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
 {
     internal class Perpustakaan
     {
+        // RAFIF
         private List<Buku> buku = new List<Buku>
         {
             new Buku("BK001", "Dasar Pemrograman JS", "Javascript", "Rafif" ,2024, 10),
@@ -37,6 +38,8 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
         }
 
         // Implementasikan Method 
+
+        // DANA
         public void PeminjamanBuku(List<Buku> rakBuku, Akun pengguna)
         {
             Console.Write("Masukkan judul buku yang ingin dipinjam : ");
@@ -78,6 +81,8 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
                 rakBuku[idx_buku].stok--;
             }
         }
+
+        // RAFIF
         public void cariByJudul(string judul)
         {
 
@@ -110,6 +115,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             return index;
         }
 
+        // DAFFA
         public void PerpanjangPeminjaman(List<Peminjaman> daftarPeminjam)
         {
             Console.Write("Masukan id peminjaman buku: ");
@@ -129,6 +135,7 @@ namespace MAIN_TUBES_KPL_KELOMPOK_5
             Console.WriteLine("Peminjaman dengan ID " + ID_peminjaman + "tidak ditemukan");
         }
 
+        // GHIYATS
         public void PengembalianBuku(List<Peminjaman> daftarPeminjam)
         {
             Console.Write("Masukan id peminjaman buku: ");
